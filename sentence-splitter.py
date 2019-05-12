@@ -49,8 +49,10 @@ def extract_sentences(filename):
 
     output_stream = open((filename+'.sentences'), 'w', encoding="utf-8")
     for sentence in sentences:
-        sentence += "\n"
-        output_stream.write(sentence)
+        if isinstance(s,str):
+            if not s.isspace():
+                sentence += "\n"
+                output_stream.write(sentence)
 
     output_stream.close()
 
