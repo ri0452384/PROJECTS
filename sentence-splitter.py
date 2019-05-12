@@ -9,11 +9,11 @@ split_into_sentences taken from: https://stackoverflow.com/a/31505798 , original
 
 def split_into_sentences(text):
     alphabets = "([A-Za-z])"
-    prefixes = "(Mr|St|Mrs|Ms|Dr|Mt|Sta|1|2|3|4|5|6|7|8|9|0)[.]"
+    prefixes = "(Mr|St|Mrs|Ms|Dr|Mt|Sta|Brgy|Atty|vs|San|Sto|www)[.]"
     suffixes = "(Inc|Ltd|Jr|Sr|Co)"
     starters = "(Mr|Mrs|Ms|Dr|He\s|She\s|It\s|They\s|Their\s|Our\s|We\s|But\s|However\s|That\s|This\s|Wherever)"
     acronyms = "([A-Z][.][A-Z][.](?:[A-Z][.])?)"
-    websites = "[.](com|net|org|io|gov)"
+    websites = "[.](com|net|org|io|gov|0|1|2|3|4|5|6|7|8|9)"
 
     text = " " + text + "  "
     text = text.replace("\n"," ")
